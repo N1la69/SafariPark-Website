@@ -14,108 +14,118 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 /********************************************/
 
 /*****************NavBar*****************/
-nav {
+header {
+    position: fixed;
     width: 100%;
-    height: 65px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: var(--color1);
+    padding: 28px 12%;
+    transition: all .8s ease;
+    line-height: 35px;
 }
 
-nav img {
-    width: 60px;
-    height: 55px;
-    position: absolute;
-    top: .58%;
-    left: .5%;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-nav ul {
-    float: right;
-    margin-right: 10px;
+.logo img {
+    width: 30px;
+    height: 30px;
 }
 
-nav ul li {
-    display: inline-block;
-    line-height: 65px;
-    margin: 0 10px;
+.navbar {
+    display: flex;
 }
 
-nav ul li a {
-    text-decoration: none;
+.navbar a {
     color: var(--color6);
-    padding: 2.5px;
-    text-transform: uppercase;
-    font-size: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .8s ease;
 }
 
-label #btn,
-label #cancel {
-    font-size: 25px;
-    color: var(--color6);
-    float: right;
-    line-height: 65px;
-    margin-right: 10px;
+.main {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#menu-icon,
+#mode {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-left: 22px;
     cursor: pointer;
+}
+
+#menu-icon,#check {
     display: none;
 }
 
-#check {
-    display: none;
-}
+@media screen and (max-width: 1280px) {
+    header {
+        padding: 14px 2%;
+        transition: .4s;
+    }
 
-@media screen and (max-width: 800px) {
-    nav ul li a {
-        padding: 1.5px;
-        font-size: 17px;
+    .navbar a {
+        padding: 5px 0;
+        margin: 0px 20px;
     }
 }
 
-@media screen and (max-width: 670px) {
-    nav img {
-        width: 50px;
-        height: 45px;
-        margin-top: 5.2px;
-        margin-left: 2.5px;
-    }
-
-    label #btn {
+@media screen and (max-width: 1090px) {
+    #menu-icon {
         display: block;
     }
 
-    ul {
-        position: fixed;
+    .navbar {
+        position: absolute;
         width: 100%;
-        height: 50vh;
-        background: var(--color4);
-        top: 65px;
+        height: 100vh;
+        top: 80px;
+        
+        background: var(--color1);
         text-align: center;
-        left: -150%;
-        transition: all 1.2s;
+        transition: all .8s ease;
     }
 
-    nav ul li {
-        display: block;
-        margin: 8px 0;
+    ul{
+        right: -100%;
     }
 
-    nav ul li a {
-        font-size: 20px;
+    .navbar li {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all .8s ease;
     }
 
-    #check:checked~ul {
-        left: 0;
+    .navbar li a{
+        margin: 12px 0;
+        padding: 0 25px;
     }
 
-    #check:checked~label #btn {
-        display: none;
-    }
+    #check:checked ~ ul {
+        right: 0px;
 
-    #check:checked~label #cancel {
-        display: block;
     }
 }
 

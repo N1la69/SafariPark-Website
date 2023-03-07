@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="Stylesheets\style.css">
     <title>Safari Park Homepage</title>
 </head>
@@ -15,21 +15,40 @@
 <body>
 
     <!--Navbar Setup-->
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check">
-            <i class="fas fa-bars" id="btn"></i>
-            <i class="fas fa-times" id="cancel"></i>
-        </label>
-        <img class="logo" src="Res\Logo.jpg" alt="logo">
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Attractions</a></li>
-            <li><a href="#">Booking</a></li>
-            <li><a href="#">Contact Us</a></li>
+    <header>
+        <a href="#" class="logo">
+            <img src="Res\Logo.jpg" alt="logo">
+        </a>
+        <ul class="navbar">
+            <li>
+                <a href="#">HOME</a>
+            </li>
+            <li>
+                <a href="#">ABOUT US</a>
+            </li>
+            <li>
+                <a href="#">ATTRACTIONS</a>
+            </li>
+            <li>
+                <a href="#">BOOKING</a>
+            </li>
+            <li>
+                <a href="#">CONTACT</a>
+            </li>
         </ul>
-    </nav>
+        <div class="main">
+            <div id="mode">
+                <i class="fa-regular fa-lightbulb"></i>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" id="menu-icon">
+                <i class="fas fa-bars" ></i>
+            </label>
+        </div>
+    </header>
+
+    <!--Necessary Scripts-->
+    
 
 </body>
 
