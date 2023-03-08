@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="Stylesheets\style.css">
     <title>Safari Park Homepage</title>
 </head>
@@ -46,12 +47,58 @@
         </div>
     </header>
 
-    <div class="container">
+    <section class="main1 swiper mySwiper">
+        <div class="wrapper swiper-wrapper">
+            <div class="slide swiper-slide">
+                <img src="Res\bg_tigers.webp" alt="img1" class="image">
+                <div class="image-data">
+                    <span class="text">Safaris</span>
+                    <h2>Experience Exclusive Tiger Safari</h2>
+                    <a href="#" class="button">Learn More</a>
+                </div>
+            </div>
+            <div class="slide swiper-slide">
+                <img src="Res\bg_tourists.jpg" alt="img2" class="image">
+                <div class="image-data">
+                    <span class="text">Tours</span>
+                    <h2>Experience Premium and Discounted Packages</h2>
+                    <a href="#" class="button">Learn More</a>
+                </div>
+            </div>
+            <div class="slide swiper-slide">
+                <img src="Res\bg_peacock1.jpg" alt="img3" class="image">
+                <div class="image-data">
+                    <span class="text">Explore</span>
+                    <h2>Explore and Experience the Wilderness!!</h2>
+                    <a href="#" class="button">Learn More</a>
+                </div>
+            </div>
+        </div>
 
-    </div>
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+    </section>
 
     <!--Necessary Scripts-->
     <script src="JS\index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
 </body>
 
 </html>

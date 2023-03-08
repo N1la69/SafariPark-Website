@@ -147,12 +147,90 @@ header {
 @media screen and (max-width: 480px){
     .logo p {
         font-size: 1.8rem;
-        color: white;
         font-weight: 900;
-        padding-left: 2px;
+        padding-left: 8px;
+        margin-left: 0;
         transition: all .5s ease;
-        
     }
 }
 
 /***************************************/
+
+/******************Carousel**********************/
+.main1{
+    width: 100%;
+    height: 100vh;
+}
+.wrapper, .slide{
+    width: 100%;
+    height: 100%;
+}
+.slide{
+    overflow: hidden;
+}
+.slide .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.slide .image-data{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.image-data span.text{
+    font-size: 34px;
+    font-weight: 400;
+    color: white;
+}
+.image-data h2{
+    font-size: 45px;
+    font-weight: 600;
+    color: white;
+}
+a.button{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 20px;
+    color: var(--color6);
+    text-decoration: none;
+    margin-top: 25px;
+    transition: all .3s ease;
+}
+a.button:hover{
+    background: var(--color1);
+    color: #fff;
+}
+.nav-btn{
+    height: 50px;
+    width: 50px;
+    background: rgba(255,255,255,.3);
+    border-radius: 50%;
+}
+.nav-btn::before, .nav-btn::after{
+    font-size: 25px;
+    color: #fff;
+}
+.nav-btn:hover{
+    background: rgba(255,255,255,.4);
+}
+.swiper-button-next{
+    right: 50px;
+}
+.swiper-button-prev{
+    left: 50px;
+}
+.swiper-pagination-bullet{
+    opacity:1;
+    height: 12px;
+    width: 12px;
+    background-color: #fff;
+}
+.swiper-pagination-bullet-active{
+    border: 2px solid #fff;
+    background-color: var(--color1);
+}
+/************************************************/
