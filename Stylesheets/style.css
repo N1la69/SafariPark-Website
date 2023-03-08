@@ -42,9 +42,11 @@ header {
     align-items: center;
 }
 
-.logo img {
-    width: 30px;
-    height: 30px;
+.logo p {
+    font-size: 50px;
+    color: white;
+    font-weight: 900;
+    margin-left: 20px;
 }
 
 .navbar {
@@ -59,14 +61,16 @@ header {
     margin: 0px 30px;
     transition: all .8s ease;
 }
-.navbar a:hover{
+
+.navbar a:hover {
     background: var(--color6);
     color: var(--color1);
     padding: 7px 10px;
     border-radius: 15px;
     transition: all .3s ease;
 }
-.navbar .active{
+
+.navbar .active {
     background: var(--color6);
     color: var(--color1);
     padding: 7px 10px;
@@ -92,7 +96,7 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1480px) {
     header {
         padding: 14px 2%;
         transition: .4s;
@@ -122,16 +126,33 @@ header {
         background: var(--color1);
         transition: all .8s ease;
     }
-    .navbar a{
+
+    .navbar a {
         display: block;
         margin: 12px 0;
         padding: 0 25px;
         transition: all .8s ease;
     }
-    .navbar.open{
+
+    .navbar .active{
+        border-radius: 0px;
+    }
+
+    .navbar.open {
         right: 2%;
     }
-    
+
+}
+
+@media screen and (max-width: 480px){
+    .logo p {
+        font-size: 1.8rem;
+        color: white;
+        font-weight: 900;
+        padding-left: 2px;
+        transition: all .5s ease;
+        
+    }
 }
 
 /***************************************/
