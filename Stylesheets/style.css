@@ -59,6 +59,19 @@ header {
     margin: 0px 30px;
     transition: all .8s ease;
 }
+.navbar a:hover{
+    background: var(--color6);
+    color: var(--color1);
+    padding: 7px 10px;
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+.navbar .active{
+    background: var(--color6);
+    color: var(--color1);
+    padding: 7px 10px;
+    border-radius: 15px;
+}
 
 .main {
     display: flex;
