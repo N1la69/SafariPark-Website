@@ -31,7 +31,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--color1);
+    background: transparent;
     padding: 28px 12%;
     transition: all .8s ease;
     line-height: 35px;
@@ -54,9 +54,9 @@ header {
 }
 
 .navbar a {
-    color: var(--color6);
+    color: white;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 900;
     padding: 5px 0;
     margin: 0px 30px;
     transition: all .8s ease;
@@ -90,6 +90,7 @@ header {
     font-size: 1.5rem;
     margin-left: 22px;
     cursor: pointer;
+    color: #fff;
 }
 
 #menu-icon {
@@ -123,7 +124,11 @@ header {
         flex-direction: column;
         justify-content: flex-start;
         border-radius: 10px;
-        background: var(--color1);
+        -webkit-backdrop-filter: blur(8px) saturate(188%);
+        backdrop-filter: blur(8px) saturate(188%);
+        background-color: rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
         transition: all .8s ease;
     }
 
@@ -134,7 +139,7 @@ header {
         transition: all .8s ease;
     }
 
-    .navbar .active{
+    .navbar .active {
         border-radius: 0px;
     }
 
@@ -144,7 +149,7 @@ header {
 
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
     .logo p {
         font-size: 1.8rem;
         font-weight: 900;
@@ -156,41 +161,87 @@ header {
 
 /***************************************/
 
+/******************Time*********************/
+.timing{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 9999999;
+}
+section i{
+    display: flex;
+    position: relative;
+    color: #fff;
+    font-size: 1.7rem;
+    align-items: center;
+}
+section h2.time{
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1.1rem;
+    color: #fff;
+    transition: all 1.4s ease;
+}
+section h2.time:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+@media screen and (max-width:768px){
+    .timing{
+        top: 22%;
+    }
+    section h2.time{
+        font-size: 1.1rem;
+        letter-spacing: .7rem;
+    }
+}
+/*******************************************/
+
 /******************Carousel**********************/
-.main1{
+.main1 {
     width: 100%;
     height: 100vh;
 }
-.wrapper, .slide{
+
+.wrapper,
+.slide {
     width: 100%;
     height: 100%;
 }
-.slide{
+
+.slide {
     overflow: hidden;
 }
-.slide .image{
+
+.slide .image {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.slide .image-data{
+
+.slide .image-data {
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.image-data span.text{
+
+.image-data span.text {
     font-size: 34px;
     font-weight: 400;
     color: white;
 }
-.image-data h2{
+
+.image-data h2 {
     font-size: 45px;
     font-weight: 600;
     color: white;
 }
-a.button{
+
+a.button {
     display: inline-block;
     padding: 10px 20px;
     background: #fff;
@@ -200,37 +251,62 @@ a.button{
     margin-top: 25px;
     transition: all .3s ease;
 }
-a.button:hover{
+
+a.button:hover {
     background: var(--color1);
     color: #fff;
 }
-.nav-btn{
+
+.nav-btn {
     height: 50px;
     width: 50px;
-    background: rgba(255,255,255,.3);
+    background: rgba(255, 255, 255, .3);
     border-radius: 50%;
 }
-.nav-btn::before, .nav-btn::after{
+
+.nav-btn::before,
+.nav-btn::after {
     font-size: 25px;
     color: #fff;
 }
-.nav-btn:hover{
-    background: rgba(255,255,255,.4);
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, .4);
 }
-.swiper-button-next{
+
+.swiper-button-next {
     right: 50px;
 }
-.swiper-button-prev{
+
+.swiper-button-prev {
     left: 50px;
 }
-.swiper-pagination-bullet{
-    opacity:1;
+
+.swiper-pagination-bullet {
+    opacity: 1;
     height: 12px;
     width: 12px;
     background-color: #fff;
+    visibility: hidden;
 }
-.swiper-pagination-bullet-active{
+
+.swiper-pagination-bullet-active {
     border: 2px solid #fff;
     background-color: var(--color1);
 }
+
+@media screen and (max-width:768px) {
+    .swiper-pagination-bullet {
+        visibility: visible;
+    }
+
+    .nav-btn {
+        visibility: hidden;
+    }
+
+    .slide .image-data {
+        top: 72%;
+    }
+}
+
 /************************************************/
