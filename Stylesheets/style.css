@@ -484,13 +484,113 @@ a.button:hover {
 
 /*******************************************/
 
+/************InfoCards****************/
+.InfoCards{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #d41e31, #491f8f);
+}
+.card img{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s;
+}
+.card:hover img{
+    left: 80%;
+}
+.card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    opacity: 0;
+    visibility: hidden;
+    padding: 20px 20px 20px 40px;
+    transition: .5s;
+}
+.card:hover .content{
+    left: 0%;
+    opacity: 1;
+    visibility: visible;
+
+}
+.card .content h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+.card .content p{
+    color: #fff;
+
+}
+.card .content a{
+    position: relative;
+    display: inline-block;
+    color: #111;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    margin-top: 10px;
+}
+@media screen and (max-width: 810px) {
+    .card{
+        position: relative;
+        max-width: 600px;
+        width: auto;
+        transition: .5s;
+        align-items: flex-start;
+    }
+    .card:hover{
+        height: 600px;
+    }
+    .card:hover img{
+        left: 50%;
+    }
+    .card .content{
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+}
+@media screen and (max-width: 460px) {
+    .card{
+        width: 400px;
+        height: 250px;
+    }
+    .card img{
+        width: 200px;
+        height: 150px;
+    }
+    .card .content{
+        padding: 20px;
+    }
+}
+/*************************************/
+
 /************Footer****************/
 footer{
     width: 100%;
     position: relative;
     bottom: 0;
-    background: linear-gradient(to right, #00093c, #2d0b00);
-    color: #fff;
+    background: linear-gradient(to right, wheat, rgb(238, 229, 211));
+    color: #b38f00;
     padding: 100px 0 30px;
     border-top-left-radius: 125px;
     font-size: 13px;
@@ -499,7 +599,7 @@ footer{
 footer hr{
     width: 90%;
     border: 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(45, 45, 184);
     margin: 20px auto;
 }
 .row{
@@ -528,7 +628,7 @@ footer hr{
 }
 .col .email-id{
     width: fit-content;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(45, 45, 184);
     margin: 20px 0;
 }
 .col ul li{
@@ -536,14 +636,14 @@ footer hr{
     margin-bottom: 12px;
 }
 .col ul li a{
-    color: #fff;
+    color: #b38f00;
 }
 .col form{
     padding-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(45, 45, 184);
     margin-bottom: 50px;
 }
 .col form .fa-regular{
