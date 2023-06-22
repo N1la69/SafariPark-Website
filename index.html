@@ -45,9 +45,6 @@
             </li>
         </ul>
         <div class="main">
-            <div id="mode">
-                <i class="fa-regular fa-lightbulb"></i>
-            </div>
             <div id="menu-icon">
                 <i class="fas fa-bars"></i>
             </div>
@@ -92,7 +89,7 @@
     <section class="head1" id="saf">
         <h1 class="header">Available Safaris</h1>
         <a href="#">View All
-            <i class="fa-regular fa-arrow-right"></i>
+            <i><box-icon name='right-arrow-alt'></box-icon></i>
         </a>
     </section>
 
@@ -133,7 +130,7 @@
     <section class="head1" id="att">
         <h1 class="header">Attractions</h1>
         <a href="#">View All
-            <i class="fa-regular fa-arrow-right"></i>
+            <i><box-icon name='right-arrow-alt'></box-icon></i>
         </a>
     </section>
 
@@ -150,7 +147,7 @@
         </div>
         <div class="card">
             <div class="content">
-                <h2>Heading</h2>
+                <h2>Bird Watching</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem provident incidunt
                     perspiciatis assumenda.</p>
                 <a href="#">Read More</a>
@@ -167,6 +164,40 @@
         <h1 class="header">Bookings</h1>
     </section>
 
+    <!-- Booking -->
+    <div class="booking">
+        <h2 class="tick">Buy Online and Save!</h2>
+        <section class="one">
+            <h2 class="head">1-Day Pass - Any Day</h2>
+            <h4>Includes: Tiger Safari, 5 free activities and all regularly scheduled experiences.</h4>
+            <section class="price">
+                <a href="#">Book Now!</a>
+                <h3>Adult (Ages 13+): 500/-</h3>
+                <h3>Child (Ages 3-12): 250/-</h3>
+            </section>
+        </section>
+        <section class="one">
+            <h2 class="head">2-Day Pass - Any Consecutive Days</h2>
+            <h4>Includes: Tiger Safari, 5 free activities, all regularly scheduled experiences for Day 1 and Wildlife
+                Trek, Safari Park, 2 premium activities for Day 2.</h4>
+            <section class="price">
+                <a href="#">Book Now!</a>
+                <h3>Adult (Ages 13+): 1500/-</h3>
+                <h3>Child (Ages 3-12): 850/-</h3>
+            </section>
+        </section>
+        <section class="one">
+            <h2 class="head">2-Day Premium Package</h2>
+            <h4>Includes: Tiger Safari, Wildlife Trek, Safari Park, 5 free activities + 10 premium activities and all
+                regularly scheduled experiences.</h4>
+            <section class="price">
+                <a href="#">Book Now!</a>
+                <h3>Adult (Ages 13+): 7500/-</h3>
+                <h3>Child (Ages 3-12): 4550/-</h3>
+            </section>
+        </section>
+
+    </div>
 
     <!--Footer-->
     <footer id="cont">
@@ -191,10 +222,10 @@
                 </h3>
                 <ul>
                     <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">ATTRACTIONS</a></li>
-                    <li><a href="#">BOOKING</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#saf">SAFARIS</a></li>
+                    <li><a href="#att">ATTRACTIONS</a></li>
+                    <li><a href="#book">BOOKING</a></li>
+                    <li><a href="#cont">CONTACT</a></li>
                 </ul>
             </div>
             <div class="col">
@@ -203,7 +234,7 @@
                 <form>
                     <i class="fa-regular fa-envelope"></i>
                     <input type="email" placeholder="Enter your email-id" required>
-                    <button type="submit"><i class="fa-regular fa-arrow-right"></i></button>
+                    <button type="submit"><i><box-icon name='right-arrow-alt'></box-icon></i></button>
                 </form>
                 <div class="social-icons">
                     <i class="fa-brands fa-instagram"></i>
@@ -231,6 +262,7 @@
         }
     </script>
     <script src="JS\index.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
