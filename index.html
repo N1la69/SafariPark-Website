@@ -15,6 +15,13 @@
 
 <body>
 
+    <!--Loader-->
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <!--Navbar Setup-->
     <header>
         <a href="index.html" class="logo">
@@ -25,7 +32,7 @@
                 <a class="active" href="#">HOME</a>
             </li>
             <li>
-                <a href="#">ABOUT US</a>
+                <a href="#saf">SAFARIS</a>
             </li>
             <li>
                 <a href="#">ATTRACTIONS</a>
@@ -82,7 +89,7 @@
     </section>
 
     <!--Header-->
-    <section class="head1">
+    <section class="head1" id="saf">
         <h1 class="header">Available Safaris</h1>
         <a href="#">View All
             <i class="fa-regular fa-arrow-right"></i>
@@ -126,12 +133,21 @@
     <div class="InfoCards">
         <div class="card">
             <div class="content">
-                <h2>HEading</h2>
+                <h2>Heading</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem provident incidunt
                     perspiciatis assumenda.</p>
                 <a href="#">Read More</a>
             </div>
             <img src="Res\bear.jpg" alt="img">
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem provident incidunt
+                    perspiciatis assumenda.</p>
+                <a href="#">Read More</a>
+            </div>
+            <img src="Res\peak.jpg" alt="img">
         </div>
     </div>
 
@@ -151,8 +167,8 @@
                 <p>15/5 Valley Road</p>
                 <p>Vizag</p>
                 <p>India</p>
-                <p class="email-id">nilanjan.s.1920@gmail.com</p>
-                <h4>+91 - 9007050971</h4>
+                <p class="email-id">abc@gmail.com</p>
+                <h4>+91 - 9007XXXXX</h4>
             </div>
             <div class="col">
                 <h3>Links <div class="underline"><span></span></div>
@@ -184,6 +200,20 @@
     </footer>
 
     <!--Necessary Scripts-->
+    <script>
+        var load = document.querySelector(".loader");
+        window.addEventListener('load', () => {
+            load.style.display = "none";
+        });
+        try {
+            AOS.init({
+                duration: 1500,
+            });
+        }
+        catch {
+            console.log("Connection Error");
+        }
+    </script>
     <script src="JS\index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
