@@ -17,6 +17,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
 
 /********************************************/
@@ -342,7 +343,7 @@ a.button:hover {
     position: relative;
     text-align: center;
     padding-top: 4.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     margin-bottom: 0;
     background: wheat;
 }
@@ -550,7 +551,7 @@ a.button:hover {
     justify-content: center;
     align-items: center;
     background: wheat;
-    min-height: 70vh;
+    min-height: 50vh;
     flex-wrap: wrap;
     column-gap: 130px;
     row-gap: 50px;
@@ -564,7 +565,8 @@ a.button:hover {
     justify-content: flex-start;
     align-items: center;
     border-radius: 20px;
-    background: linear-gradient(135deg, var(--color3), var(--color2), var(--color4));
+    background: linear-gradient(135deg, var(--color5), var(--color1));
+ 
 }
 .card img{
     position: absolute;
